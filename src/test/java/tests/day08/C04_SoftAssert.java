@@ -40,6 +40,7 @@ public class C04_SoftAssert {
                 "title istenen cumleyi icermiyor");
         driver.findElement(By.xpath("//input[@class='desktopOldAutosuggestTheme-input']")).sendKeys("araba"+ Keys.ENTER);
         //bulunan sonuc sayisini yazdirin
+
         WebElement sonucYazisiElementi=driver.findElement(By.className("category-suggestion-title"));
         System.out.println(sonucYazisiElementi.getText());
         //sonuc yazisinin "araba" icerdigini dogrulayin
@@ -48,6 +49,7 @@ public class C04_SoftAssert {
         softAssert.assertFalse(sonucYazisiElementi.getText().contains("oto"),"sonuc yazisi oto iceriyor");
         softAssert.assertAll();
     }
+
     @AfterClass
     public void tearDown(){
         driver.close();
