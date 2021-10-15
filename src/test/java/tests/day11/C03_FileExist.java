@@ -23,6 +23,9 @@ public class C03_FileExist  {
         System.out.println("dosya yolumuz : "+dosyaYolu);
         System.out.println(Files.exists (Paths.get (dosyaYolu)));
         Assert.assertTrue(Files.exists (Paths.get (dosyaYolu)));
+
+        System.out.println(System.getProperty("user.dir"));
+        //icinde oldugumuz dosyanin yolunu verir.
     }
 }
 
