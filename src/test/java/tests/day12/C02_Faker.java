@@ -56,7 +56,8 @@ public class C02_Faker extends TestBase {
                 .sendKeys(String.valueOf(faker.number().numberBetween(1995,2001)))
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
-                .click()
+                .sendKeys(Keys.ARROW_RIGHT)
+                .sendKeys(Keys.ARROW_LEFT)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB).perform();
