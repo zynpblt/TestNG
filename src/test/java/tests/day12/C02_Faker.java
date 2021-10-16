@@ -25,7 +25,7 @@ public class C02_Faker extends TestBase {
     ////Sayfayi kapatin
 
     @Test
-    public void test(){
+    public void test() throws InterruptedException {
         driver.get("https://facebook.com");
         driver.findElement(By.xpath("//button[@class='_42ft _4jy0 _9xo7 _4jy3 _4jy1 selected _51sy']")).click();
         driver.findElement(By.linkText("Create New Account")).click();
@@ -59,8 +59,9 @@ public class C02_Faker extends TestBase {
                 .click()
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
-                .sendKeys(Keys.TAB)
-                .sendKeys(Keys.ENTER).perform();
+                .sendKeys(Keys.TAB).perform();
+                Thread.sleep(5000);
+                actions.sendKeys(Keys.ENTER).perform();
 
     }
 }
