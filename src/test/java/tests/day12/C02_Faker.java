@@ -23,6 +23,7 @@ public class C02_Faker extends TestBase {
     ////Cinsiyeti secin
     ////Isaretlediginiz cinsiyetin secili, diger cinsiyet kutusunun secili olmadigini test edin.
     ////Sayfayi kapatin
+
     @Test
     public void test(){
         driver.get("https://facebook.com");
@@ -60,5 +61,6 @@ public class C02_Faker extends TestBase {
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.ENTER).perform();
+
     }
 }
